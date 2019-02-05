@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-1.2.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-1.2.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-samples-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-samples-1.2.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/aws-iot-device-sdk-java-samples-1.2.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="/home/bikashp/Desktop/AWS IoT Project/E14_AWS_IoT_STM32/Lib/org.eclipse.paho.client.mqttv3-1.1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
