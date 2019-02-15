@@ -1,22 +1,88 @@
 #ifndef __MQTT_SERVER_SETTING_H__
 #define __MQTT_SERVER_SETTING_H__
 
-const char MQTT_SERVER_HOST_NAME[] = "a32e6rcmmefpik-ats.iot.us-east-2.amazonaws.com";
+//const char MQTT_SERVER_HOST_NAME[] = "a32e6rcmmefpik-ats.iot.ap-southeast-2.amazonaws.com"; //Sydney
+const char MQTT_SERVER_HOST_NAME[] = "a32e6rcmmefpik-ats.iot.us-east-2.amazonaws.com"; //Ohio
 const char MQTT_CLIENT_ID[] = "gfdfgdsggfsdgfsdgf";
 const char MQTT_USERNAME[] = "nmnnmm";
 const char MQTT_PASSWORD[] = "mmnnnmn";
 const char MQTT_TOPIC_PUB[] = "test/sensors/data";
 const char MQTT_TOPIC_SUB[] = "test/lock/status";
+const char PUB_CARD[] = "test/lock/card";
 
 
 const int MQTT_SERVER_PORT = 8883;
 
-/*
- * Root CA certificate here in PEM format.
- * "-----BEGIN CERTIFICATE-----\n"
- * ...
- * "-----END CERTIFICATE-----\n";
- */
+//For Sydney location
+
+// * (optional) Client certificate here in PEM format.
+// * Set NULL if you don't use.
+// * "-----BEGIN CERTIFICATE-----\n"
+// * ...
+// * "-----END CERTIFICATE-----\n";
+// */
+//const char* SSL_CLIENT_CERT_PEM = 
+//"-----BEGIN CERTIFICATE-----\n"
+//"MIIDWjCCAkKgAwIBAgIVAJ7URx/gIJc149C4OphLBAxBGifBMA0GCSqGSIb3DQEB\n"
+//"CwUAME0xSzBJBgNVBAsMQkFtYXpvbiBXZWIgU2VydmljZXMgTz1BbWF6b24uY29t\n"
+//"IEluYy4gTD1TZWF0dGxlIFNUPVdhc2hpbmd0b24gQz1VUzAeFw0xOTAyMTIwNjQ1\n"
+//"NDBaFw00OTEyMzEyMzU5NTlaMB4xHDAaBgNVBAMME0FXUyBJb1QgQ2VydGlmaWNh\n"
+//"dGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCetRg7kZ7NoLyofEz+\n"
+//"lBOq66StpNtILgv5iubhbcGTya4feEeYkBj83GjfKTBXDn8XiC+jWmilLHk81zmI\n"
+//"ZRgSJ7mYszZosYiZUdI4L96MyhcmoCv4R57mx0pTYRsHosqGtyoaVmHDNWN/T+Y3\n"
+//"c0u0PS4mD7znmpZAh+RgZi1l4CaLY35NhbOTJzm83BOXHwx7AtjsJx7+azCnruIe\n"
+//"ZuqaYc9W8DyaP8cw9QU7lm9THdWCw9yJipr/Q7Rx4GGEt/h3gYVIEDltF5jEg57O\n"
+//"a2gmsQRXitV4XwHRZiXK06EzysCZhkLEl7kJdwVOhRSZ/e/mzvfuWfpJYmzwFBW6\n"
+//"r7y3AgMBAAGjYDBeMB8GA1UdIwQYMBaAFLxLAFdK2b2RzLSpxVjyZ/9/BWX+MB0G\n"
+//"A1UdDgQWBBRF/QnhF3x0kaHu0JNtyAXJtEPKvzAMBgNVHRMBAf8EAjAAMA4GA1Ud\n"
+//"DwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAhg8L5lzaRDrxa+544ftFSyj6\n"
+//"JVaqGuyhZYUVaBrQp1LZRujEZkqVJEWv8JJ/OJVInBgRyHo+cmo762aP2Nn5lmfF\n"
+//"SQgwY8eJH+3w+B4q6gWJS1mFqsOLWHX1QN91uy7O5fAmTFVEvY9i/hr5TH+HH0Ig\n"
+//"tt6ttAxJchokgcWo8IkB5RtI2z86pb2ElJFCl5fV6o6/Rtmb9hQX0ZILTasjUdkP\n"
+//"FJBtAUBx8/8C75kqwsNAIVZ9Yg09DAIGJIsivO3om08vZk2SrtQT1tf+P7AVqJ7w\n"
+//"MDY7Z+8NppBtoEz9JPLSiF+p8N2a9DIDT9ZClqU2qqvcC5wR2o6ut1XSFxx/kg==\n"
+//"-----END CERTIFICATE-----\n";
+//
+//
+///*
+// * (optional) Client private key here in PEM format.
+// * Set NULL if you don't use.
+// * "-----BEGIN RSA PRIVATE KEY-----\n"
+// * ...
+// * "-----END RSA PRIVATE KEY-----\n";
+// */
+//const char* SSL_CLIENT_PRIVATE_KEY_PEM = 
+//"-----BEGIN RSA PRIVATE KEY-----\n"
+//"MIIEpAIBAAKCAQEAnrUYO5GezaC8qHxM/pQTquukraTbSC4L+Yrm4W3Bk8muH3hH\n"
+//"mJAY/Nxo3ykwVw5/F4gvo1popSx5PNc5iGUYEie5mLM2aLGImVHSOC/ejMoXJqAr\n"
+//"+Eee5sdKU2EbB6LKhrcqGlZhwzVjf0/mN3NLtD0uJg+855qWQIfkYGYtZeAmi2N+\n"
+//"TYWzkyc5vNwTlx8MewLY7Cce/mswp67iHmbqmmHPVvA8mj/HMPUFO5ZvUx3VgsPc\n"
+//"iYqa/0O0ceBhhLf4d4GFSBA5bReYxIOezmtoJrEEV4rVeF8B0WYlytOhM8rAmYZC\n"
+//"xJe5CXcFToUUmf3v5s737ln6SWJs8BQVuq+8twIDAQABAoIBAQCb7Mg2HkerNvSj\n"
+//"hBwRMmJwVrugbouSSssxDKrxZ+f7zvXnrUCKP2iNZe8S8WCw52kuMXq8PyL4xM0I\n"
+//"XVwFCW2wyJ6ry8b07ReLqruiwEUihZphNJR+hb80dTAs4wavZd0cpfATmDLMmzN5\n"
+//"7YH9kKUcG8+vTV8HHPXpyJkzrK+Fmjt+eq3AiryOhcGfymwaKJ8BQYc4GJb7pvvy\n"
+//"MaO6U1EyW/NvjUd4YWVU4hXtC3aKILWSSryvcOEHETAhTWJE+GzZYXTLZsqX7zN7\n"
+//"ZSy7WW0/zUZD/mgc3olD1M6Asxc3BqOTSq1SNs4az0M1t+czx+Uc9Z/Ko/dPBHi5\n"
+//"uZowcLAhAoGBANAYmO6B4pzslRIBJknHIQUdVtD8iu9SEJw6N0Ow0SCbWily9Nbx\n"
+//"ewXf9rUAd7O6wGybyAAJB885LWljc/lxyK70WFOONzRWbaakNvpJC8kvaESZAeEN\n"
+//"6Esn1KRHgGGvZQozULMznRjSoUeJFKnKt13euIrp3NlnN5KZ00U0xigbAoGBAMM9\n"
+//"827YqQAQBLVI7wqqO/wI+7jTORQoulpPrG1RZFCdBwVIQFO+xpPGfc0gEAH6Zca4\n"
+//"tANUc6dnCdgIHp+yAe9Q4WmnzH7uU0H3vh0+NllJl1IFOUcBjZsv/j7Or5m+5jP/\n"
+//"gsUwjhk32On6tCmvjTXqJWuBcbfDytwgE4mRr3+VAoGAM4WDh7m8w6GHnveN5UJa\n"
+//"GIwVDJUaSPqGhkebmzTR8kLEZfLCT91l2iSDTnkZKfSY48sGD4ws1M+RQMCQ3Deh\n"
+//"uj9hBv71CA5GA7YwrnMbaepE5IcFghURaFoqOapCTO1CFO5zkoq64IR1zeJQrWE1\n"
+//"WRZllm8kcOcvSSqwtjfEv/UCgYAdlqnpxpP2GndcMe1oJFxq2cGsRPaFg5aaUTDE\n"
+//"cG1PejyyJDz7dBIMGyy9hXpnklcSQrOlPYs5d3gacUCS2xtH9W3z4SYwplWfzbfW\n"
+//"HrOF3I0+NOR1Slr3hdJ2GkSqfC/O+Y4L7EvcroYFD6V2G9C+tvlszXU6cEWyDnpn\n"
+//"gtih8QKBgQCUrS75YxGkR4F7t5DyB3WtJsPD0pA5oqgrlQd/tWe2BJmUQFqJd+QE\n"
+//"0Gw4HyPJweBJvPowbhQHrB/VzPKAtINJ+dlhxAk7wufHOgiuYU5eEaDf1pUowYHk\n"
+//"JGjf2GAI1Yvg35YuDa3uicHqvYPEAtgf7dbBUxUoisCv7uJ3s3P6Jg==\n"
+//"-----END RSA PRIVATE KEY-----\n"
+//;
+
+// For Ohio Location
+
 const char* SSL_CA_PEM =
 
 /* Amazon Root CA 1 */
@@ -108,5 +174,4 @@ const char* SSL_CLIENT_PRIVATE_KEY_PEM =
 "0Ku1R3ZdbkBRF9S+sflxGOts2N0NnjPDs5V86XEC5bXLGxX3tyYu\n"
 "-----END RSA PRIVATE KEY-----\n"
 ;
-
 #endif /* __MQTT_SERVER_SETTING_H__ */
