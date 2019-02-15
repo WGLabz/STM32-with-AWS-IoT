@@ -7,7 +7,7 @@ An IoT project around STM32L475 discovery board. The project is about sending th
 
 ## MBED Libraries
 * [HTS221Sensor](https://os.mbed.com/teams/ST/code/HTS221/)
-* [LPS22HBSensor](https://os.mbed.com/teams/ST/code/LPS22HB
+* [LPS22HBSensor](https://os.mbed.com/teams/ST/code/LPS22HB)
 
 
 ## Node-RED Dependencies [Server URL](https://gtcnodered.eu-gb.mybluemix.net/red/#)
