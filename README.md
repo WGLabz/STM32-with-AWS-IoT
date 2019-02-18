@@ -13,3 +13,9 @@ An IoT project around STM32L475 discovery board. The project is about sending th
 ## Node-RED Dependencies [Server URL](https://gtcnodered.eu-gb.mybluemix.net/red/#)
 * [Node-Red Dashboard](https://flows.nodered.org/node/node-red-dashboard)
 
+## Screenshots
+
+*  QR Code for Dashboard ![picture](screenshots/QR Code.png)
+*  Node-RED Flow ![picture](screenshots/flow.PNG)
+*  Node-RED Dashboard ![picture](screenshots/dashbaord.PNG)
+
