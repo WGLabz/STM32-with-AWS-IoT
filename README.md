@@ -15,10 +15,11 @@ An IoT project around STM32L475 discovery board. The project is about sending th
 
 ## Screenshots
 
-*  QR Code for Dashboard 
- ![picture](screenshots/qr_code.png)
-*  Node-RED Flow 
-![picture](screenshots/flow.PNG)
-*  Node-RED Dashboard 
- ![picture](screenshots/dashbaord.PNG)
+QR Code for Dashboard <br /> <br /> <br />
+![picture](screenshots/qr_code.png)
+ <br />
+Node-RED Flow  <br /> <br /> <br />
+![picture](screenshots/flow.PNG) <br />
+Node-RED Dashboard  <br /> <br /> <br />
+![picture](screenshots/dashbaord.PNG) <br />
 
