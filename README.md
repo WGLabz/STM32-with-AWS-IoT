@@ -14,10 +14,6 @@ An IoT project around STM32L475 discovery board. The project is about sending th
 * [Node-Red Dashboard](https://flows.nodered.org/node/node-red-dashboard)
 
 ## Screenshots
-
-QR Code for Dashboard <br /> <br /> <br />
-![picture](screenshots/qr_code.png)
- <br />
 Node-RED Flow  <br /> <br /> <br />
 ![picture](screenshots/flow.PNG) <br />
 Node-RED Dashboard  <br /> <br /> <br />
